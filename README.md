@@ -7,6 +7,7 @@ Fine-tune a small language model (Qwen2.5-0.5B) using Unsloth + LoRA on a blende
 ```
 ├── prepare_data.py              # Data curation: blend 40/40/20, split train/val
 ├── train.py                     # Fine-tuning with Unsloth + LoRA (PEFT fallback)
+├── train.ipynb                  # Notebook version of the training workflow
 ├── evaluate.py                  # Perplexity + sample generation evaluation
 ├── generate.py                  # Interactive/batch text generation
 ├── train_tiny_diffusion_lm.py   # CPU-only toy diffusion demo (original prototype)
@@ -56,6 +57,8 @@ python train.py \
 ```
 
 The trained model is saved to `output/final/` (LoRA adapter) and `output/merged_16bit/` (merged weights).
+
+You can also run the same workflow in Jupyter with `train.ipynb`.
 
 ### 4. Evaluate
 
